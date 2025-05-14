@@ -7,7 +7,7 @@ async function carregarMenu() {
     }
 
     const arquivos = await response.json();
-    console.log("Menu JSON:", JSON.stringify(arquivos, null, 2));
+    // console.log("Menu JSON:", JSON.stringify(arquivos, null, 2));
 
     const menu = document.getElementById("menu");
     menu.innerHTML = "";
@@ -57,6 +57,7 @@ async function carregarMenu() {
 
 
           const caminho = `/Menus${caminhoPai}/${item.nome}`;
+          console.log(caminho);
           li.addEventListener("click", (e) => {
             e.preventDefault();
             carregarPagina(caminho);

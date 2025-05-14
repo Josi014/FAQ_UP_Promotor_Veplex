@@ -1,4 +1,4 @@
-import {openFullscreen, closeFullscreen, button_contact, accordion } from './animacoes.js';
+import {openFullscreen, closeFullscreen, accordion } from './animacoes.js';
 
 
 async function carregarPagina(caminho) {
@@ -10,10 +10,10 @@ async function carregarPagina(caminho) {
     const conteudoDiv = document.getElementById("pagina");
     conteudoDiv.innerHTML = html;
 
-    // await new Promise((resolve) => setTimeout(resolve, 0));
+    await new Promise((resolve) => setTimeout(resolve, 0));
 
     accordion();
-    button_contact();
+    // button_contact();
 
   
     const imagem = conteudoDiv.querySelector(".image-info");
@@ -34,6 +34,5 @@ async function carregarPagina(caminho) {
 window.openFullscreen = openFullscreen;
 window.closeFullscreen = closeFullscreen;
 window.carregarPagina = carregarPagina;
-window.button_contact = button_contact;
 window.accordion = accordion;
 export { carregarPagina };

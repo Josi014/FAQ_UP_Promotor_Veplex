@@ -170,6 +170,7 @@ main {
 .contact-button {
     background-color: var(--secondary-green);
     color: var(--white);
+    text-decoration: none;
     border: none;
     padding: 12px 24px;
     font-size: 1rem;
@@ -177,6 +178,8 @@ main {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .contact-button:hover {
@@ -555,6 +558,7 @@ figure {
     .accordion-header {
         font-size: 1rem;
         padding: 25px;
+
     }
 
     /* .contact-section{

@@ -15,23 +15,23 @@ function verificarTipoDispositivo() {
   return 'ontouchstart' in window ? 'mobile' : 'desktop';
 }
 
-export function button_contact() {
-  const tipoDispositivo = verificarTipoDispositivo();
-  const contact_button = document.querySelector(".contact-button");
-  const whats = document.getElementById("whats");
-  const email = document.getElementById("email");
+// export function button_contact() {
+//   const tipoDispositivo = verificarTipoDispositivo();
+//   const contact_button = document.querySelector(".contact-button");
+//   const whats = document.getElementById("whats");
+//   const email = document.getElementById("email");
 
-  if(tipoDispositivo === 'mobile') {
-    contact_button.addEventListener('click', function () {
-      window.open(whats.href, '_blank');
-    });
-  } else {
-    contact_button.addEventListener('click', function () {
-      window.open(email.href, '_blank');
-    });
-  }
+//   if(tipoDispositivo === 'mobile') {
+//     contact_button.addEventListener('click', function () {
+//       window.open(whats.href, '_blank');
+//     });
+//   } else {
+//     contact_button.addEventListener('click', function () {
+//       window.open(email.href, '_blank');
+//     });
+//   }
 
-}
+// }
 
 export function accordion() {
   const accordionHeaders = document.querySelectorAll('.accordion-header');
