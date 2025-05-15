@@ -20,7 +20,7 @@ body {
     background-color: var(--light-gray);
     color: var(--dark-gray);
     line-height: 1.6;
-    user-select: none;
+    /* user-select: none; */
     -webkit-user-drag: none;
     /* background: linear-gradient(
         180deg,
@@ -525,6 +525,9 @@ figure {
     align-items: center;
 }
 
+.titulo_home{
+    color: var(--tertiary-blue);
+}
 
 @media (max-width: 768px) {
     body {
