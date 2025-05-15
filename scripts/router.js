@@ -23,6 +23,7 @@ async function carregarPagina(caminho) {
       });
     }
 
+    
   } catch(erro) {
     console.error("Erro ao carregar a página:", erro);
     document.getElementById("pagina").innerHTML = "<p>Erro ao carregar página.</p>";
@@ -30,6 +31,18 @@ async function carregarPagina(caminho) {
 
 
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll('.carregar-pagina');
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const caminho = this.getAttribute("href");
+      carregarPagina(caminho);
+    });
+  });
+});
 
 window.openFullscreen = openFullscreen;
 window.closeFullscreen = closeFullscreen;
