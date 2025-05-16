@@ -551,7 +551,7 @@ ul {
 
 .carregar-pagina{
     text-decoration: none;
-    color: var(--tertiary-blue);
+    color: var(--primary-blue);
     font-weight: bold;
 }
 
@@ -675,7 +675,7 @@ ul {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 390px) {
     .logo-container {
         flex-direction: column;
         gap: 10px;
@@ -697,6 +697,11 @@ ul {
 
     .logo_menu {
         height: 100px;
+    }
+
+
+    .title_home{
+        font-size: 1.5rem;
     }
 
 

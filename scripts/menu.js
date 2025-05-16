@@ -1,5 +1,7 @@
 import { carregarPagina } from "./router.js";
 async function carregarMenu() {
+  document.body.classList.add("sidebar-fechado");
+
   try {
     const response = await fetch("http://192.168.18.252:3000/menu");
     if(!response.ok) {
