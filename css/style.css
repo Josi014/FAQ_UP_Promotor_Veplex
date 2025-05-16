@@ -20,7 +20,7 @@ body {
     background-color: var(--light-gray);
     color: var(--dark-gray);
     line-height: 1.6;
-    /* user-select: none; */
+    user-select: none;
     -webkit-user-drag: none;
     /* background: linear-gradient(
         180deg,

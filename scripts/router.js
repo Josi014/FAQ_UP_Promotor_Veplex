@@ -1,4 +1,4 @@
-import {openFullscreen, closeFullscreen, accordion } from './animacoes.js';
+import { openFullscreen, closeFullscreen, accordion, abrirAccordionHome } from './animacoes.js';
 
 
 async function carregarPagina(caminho) {
@@ -15,7 +15,7 @@ async function carregarPagina(caminho) {
     accordion();
     // button_contact();
 
-  
+
     const imagem = conteudoDiv.querySelector(".image-info");
     if(imagem) {
       imagem.addEventListener("click", () => {
@@ -23,7 +23,8 @@ async function carregarPagina(caminho) {
       });
     }
 
-    
+
+
   } catch(erro) {
     console.error("Erro ao carregar a página:", erro);
     document.getElementById("pagina").innerHTML = "<p>Erro ao carregar página.</p>";
@@ -34,18 +35,32 @@ async function carregarPagina(caminho) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll('.carregar-pagina');
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const caminho = this.getAttribute("href");
-      carregarPagina(caminho);
+  const lis = document.querySelectorAll('li.card_liHome');
+
+  lis.forEach(li => {
+    li.addEventListener("click", function (e) {
+      const link = li.querySelector('a.carregar-pagina');
+      if(link) {
+        e.preventDefault();
+        const caminhoOrigin = link.getAttribute("href");
+        carregarPagina(caminhoOrigin);
+
+        const href = link.getAttribute("href");
+        const targetId = href.split("#")[1];
+        const caminho = href.split("#")[0];
+  
+        carregarPagina(caminho).then(() => {
+          if(targetId) abrirAccordionHome(targetId);
+        });
+      }
     });
   });
 });
+
 
 window.openFullscreen = openFullscreen;
 window.closeFullscreen = closeFullscreen;
 window.carregarPagina = carregarPagina;
 window.accordion = accordion;
+window.abrirAccordionHome = abrirAccordionHome;
 export { carregarPagina };

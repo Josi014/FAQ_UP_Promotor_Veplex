@@ -11,9 +11,9 @@ export function closeFullscreen() {
 
 
 
-function verificarTipoDispositivo() {
-  return 'ontouchstart' in window ? 'mobile' : 'desktop';
-}
+// function verificarTipoDispositivo() {
+//   return 'ontouchstart' in window ? 'mobile' : 'desktop';
+// }
 
 // export function button_contact() {
 //   const tipoDispositivo = verificarTipoDispositivo();
@@ -41,6 +41,8 @@ export function accordion() {
       const content = this.nextElementSibling;
       const isActive = this.classList.contains('active');
 
+      console.log(content);
+
       accordionHeaders.forEach(otherHeader => {
         if(otherHeader !== this) {
           otherHeader.classList.remove('active');
@@ -57,10 +59,19 @@ export function accordion() {
           const targetHeading = content.querySelector('h3');
           if(targetHeading) {
             targetHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
+
           }
-        }, 300); 
+        }, 300);
       }
     });
+
   });
+}
+
+
+export function abrirAccordionHome(targetId) {
+  console.log(targetId)
+  const target = document.getElementById(targetId);
+  target.click();
+
 }
