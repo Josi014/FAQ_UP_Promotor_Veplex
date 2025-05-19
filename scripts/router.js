@@ -16,6 +16,16 @@ async function carregarPagina(caminho) {
 
 
     accordion();
+   
+    const toggleTheme = document.getElementById("toggleTheme");
+    // toggleTheme.addEventListener("click", changeTheme);
+
+    if(toggleTheme){
+      toggleTheme.addEventListener("click", () => {
+        changeTheme();
+      })
+    }
+
 
     //Se imagem-info(imagem contida no accordion) for clicada, chama a função abrirTelaCheia.
     const imagem = conteudoDiv.querySelector(".image-info");
@@ -71,6 +81,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById("toggleTheme");
+
+  const setTheme = (theme) => {
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  };
+
+  const toggleTheme = () => {
+    const newTheme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+
+  setTheme(localStorage.getItem("theme") || "light");
+
+  toggleBtn?.addEventListener("click", toggleTheme);
+});
+
+
 
 window.openFullscreen = abrirTelaCheia;
 window.fecharTela = fecharTela;

@@ -41,10 +41,9 @@ function listarConteudo(diretorio) {
       const baseName = path.basename(item, '.html');// Remove a extensão '.html' do nome do arquivo
       const separaCaminho = baseName.split("."); // Divide o nome do arquivo no ponto (ex: "1.nome" vira ["1", "nome"])
 
-      const nomeArquivo = separaCaminho[1];// Obtém a segunda parte do caminho para usar como nome do arquivo HTML
+      // const nomeArquivo = separaCaminho[1];
       const nomeImagemPasta = separaCaminho[1];// Usa a mesma parte do caminho para definir o nome da imagem correspondente
       const imagem = `/images/imgMenu/${nomeImagemPasta}.png`; // Monta o caminho completo da imagem baseado no nome obtido
-
 
       //Define retorno
       const resultado = {

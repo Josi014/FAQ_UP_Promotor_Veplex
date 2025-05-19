@@ -1,3 +1,54 @@
+:root[data-theme='light'] {
+    --primary-blue: rgba(22, 123, 215, 1);
+    --color-botao: #8cdc24;
+    --colorLattersTAccordion: #3db4e7;
+    --colorh: #3db4e7;
+    --title: white;
+    --fundo: #f5f5f5;
+    --fundo-card: white;
+    --fundo-card-accordion: white;
+    --color-pAccordion: #333;
+    --efeito-hover: lightgray;
+    --color-legenda: gray;
+    --card-home: linear-gradient(100deg, #0e6bcd 0%, #40b4e9 40%);
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --color-accordion: rgba(22, 123, 215, 0.05);
+    --color-titleAccordionH3: #333;
+    --color-menu: white;
+    --color-arquivo: #525252;
+    --icone-menu: invert(0);
+}
+
+:root[data-theme='dark'] {
+    --primary-blue: rgba(22, 123, 215, 1);
+    --color-botao: #8cdc24;
+    --colorLattersTAccordion: #3db4e7;
+    --colorh: lightgray;
+    --title: lightgray;
+    --fundo-card-accordion: #333;
+    --color-pAccordion: lightgray;
+    --efeito-hover: lightgray;
+    --fundo: #111217;
+    --fundo-card: white;
+    --card-home: linear-gradient(100deg, #1486ff 0%, #1e80ac 40%);
+    --sombra: 0 4px 6px rgba(255, 255, 255, 0.589);
+    --color-titleAccordionH3: white;
+    --color-legenda: white;
+    --color-menu: #333;
+    --color-arquivo: lightgray;
+    --icone-menu: invert(100%);
+
+}
+
+
+html[data-theme='light'] .brand__logo {
+    filter: invert(1);
+}
+
+html[data-theme='light'] .technologies__logo {
+    filter: invert(80%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +57,9 @@
 
 }
 
-:root {
-    --primary-blue: rgba(22, 123, 215, 1);
-    --secondary-green: #8cdc24;
-    --tertiary-blue: #3db4e7;
-    --light-gray: #f5f5f5;
-    --dark-gray: #333;
-    --white: #fff;
-}
-
 body {
     flex: 1;
-    background-color: var(--light-gray);
-    color: var(--dark-gray);
+    background-color: var(--lfundo-body);
     line-height: 1.6;
     user-select: none;
     -webkit-user-drag: none;
@@ -29,6 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: var(--fundo);
 
 }
 
@@ -59,6 +101,9 @@ header {
 header h1 {
     font-size: 2.5rem;
     margin-top: 10px;
+    color: var(--title);
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
+
 }
 
 .title {
@@ -72,6 +117,7 @@ header h1 {
     text-align: center;
     margin-top: 25px;
     font-size: 2rem;
+    color: var(--color-titleAccordionH3);
 }
 
 .stroke {
@@ -86,7 +132,7 @@ main {
 
 .faq-container {
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--sombra);
     overflow: hidden;
     margin: 100px 100px 0;
 
@@ -106,22 +152,22 @@ main {
     align-items: center;
     width: 100%;
     padding: 40px;
-    background-color: var(--white);
+    background-color: var(--fundo-card-accordion);
     border: none;
     text-align: left;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--colorh);
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 5px solid var(--tertiary-blue);
+    border-left: 5px solid var(--colorLattersTAccordion);
 
     transition: background-color 0.3s ease;
 }
 
 .accordion-header:hover {
-    background-color: rgba(22, 123, 215, 0.05);
-    border-color: var(--secondary-green);
+    background-color: var(--color-accordion);
+    border-color: var(--color-botao);
 }
 
 .accordion-header i {
@@ -136,13 +182,13 @@ main {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background-color: var(--white);
+    background-color: var(--fundo-card-accordion);
     padding: 0 20px;
 }
 
 .accordion-content p {
     padding: 0 0 20px 0;
-    color: var(--dark-gray);
+    color: var(--color-pAccordion);
     font-size: 1.5rem;
 }
 
@@ -152,13 +198,13 @@ main {
 }
 
 .contact-section h2 {
-    color: var(--primary-blue);
+    color: var(--colorh);
     margin-bottom: 20px;
 }
 
 .contact-button {
-    background-color: var(--secondary-green);
-    color: var(--white);
+    background-color: var(--color-botao);
+    color: white;
     text-decoration: none;
     border: none;
     padding: 12px 24px;
@@ -172,13 +218,14 @@ main {
 }
 
 .contact-button:hover {
-    background-color: #7bc31f;
+    background-color: var(--efeito-hover);
+    color: var(--colorLattersTAccordion);
 }
 
 .footer_pages {
     background-color: var(--primary-blue);
     filter: drop-shadow(1px 0 0 white) drop-shadow(0 1px 0 white) drop-shadow(-1px 0 0 white) drop-shadow(0 -1px 0 white);
-    color: var(--white);
+    color: white;
     padding: 20px 0;
     text-align: center;
 }
@@ -197,8 +244,8 @@ main {
 
 #menu {
     width: 25%;
-    background-color: white;
-    color: #fefefe;
+    background: var(--color-menu);
+    /* color: #fefefe; */
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -245,14 +292,15 @@ main {
     object-fit: contain;
     user-select: none;
     -webkit-user-drag: none;
+    filter: var(--icone-menu);
 }
 
 #menu li:hover {
     filter: invert(64%) sepia(93%) saturate(676%) hue-rotate(166deg) brightness(97%) contrast(92%);
-    color: var(--tertiary-blue);
+    color: var(--colorLattersTAccordion);
 }
 
-.submenu {
+/* .submenu {
     list-style-type: none;
     padding: 0;
     display: none;
@@ -268,27 +316,27 @@ main {
     cursor: pointer;
     width: 100%;
     text-align: left;
-}
+} */
 
-.submenu li ul {
+/* .submenu li ul {
     background-color: rgba(151, 145, 145, 0.829) !important;
     ;
     backdrop-filter: blur(4px);
-}
+} */
 
-
+/* 
 .submenu a {
     text-decoration: none;
     color: #e0e0e0;
     display: block;
     width: 100%;
 
-}
+} */
 
 .arquivo_a {
     font-size: 15px;
     text-decoration: none;
-    color: #525252;
+    color: var(--color-arquivo);
     padding: 2px;
 }
 
@@ -379,7 +427,7 @@ figure {
 }
 
 .legenda {
-    color: gray;
+    color: var(--color-legenda);
     font-size: 12px;
     text-align: center;
 }
@@ -416,7 +464,8 @@ figure {
     background-color: rgba(0, 0, 0, 1);
     justify-content: center;
     align-items: center;
-    cursor: zoom-out;}
+    cursor: zoom-out;
+}
 
 .lightbox-content {
     max-width: 90%;
@@ -483,7 +532,7 @@ figure {
 }
 
 .home {
-    background: linear-gradient(100deg, #0e6bcd 0%, #40b4e9 40%);
+    background: var(--card-home);
     padding: 3% 3% 5%;
     margin: 20px auto;
     width: 100vw;
@@ -495,7 +544,7 @@ figure {
 .title_home {
     text-align: center;
     margin-bottom: 2%;
-    color: white;
+    color: var(--title);
     font-size: 3rem;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
 }
@@ -512,27 +561,27 @@ figure {
 }
 
 .card_liHome {
-    background-color: white;
+    background-color: var(--fundo-card-accordion);
     margin-top: 2%;
     padding: 2%;
     width: 50%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid var(--secondary-green);
+    border-left: 5px solid var(--color-botao);
 }
 
 .card_liHome:hover {
-    border-color: var(--tertiary-blue);
+    border-color: var(--colorLattersTAccordion);
 }
 
 .carregar-pagina {
     text-decoration: none;
-    color: var(--primary-blue);
+    color: var(--colorh);
     font-weight: bold;
     font-size: 1.5rem;
 
 }
 
-.p_abriir{
+.p_abriir {
     cursor: pointer;
 }
 
@@ -547,7 +596,7 @@ figure {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     body {
         -webkit-tap-highlight-color: transparent;
     }
