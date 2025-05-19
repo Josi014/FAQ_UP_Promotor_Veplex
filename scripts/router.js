@@ -1,6 +1,6 @@
 import {
   abrirTelaCheia,
-  fechaTela,
+  fecharTela,
   accordion,
   abrirAccordionHome,
 } from "./animacoes.js";
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.openFullscreen = abrirTelaCheia;
-window.closeFullscreen = fechaTela;
+window.fecharTela = fecharTela;
 window.carregarPagina = carregarPagina;
 window.accordion = accordion;
 window.abrirAccordionHome = abrirAccordionHome;

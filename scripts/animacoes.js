@@ -7,7 +7,7 @@ export function abrirTelaCheia(src) {
 }
 
 // Função para fechar a tela cheia
-export function fechaTela() {
+export function fecharTela() {
   document.getElementById("lightbox").style.display = "none";
 }
 
