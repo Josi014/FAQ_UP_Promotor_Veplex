@@ -1,38 +1,17 @@
 
-export function openFullscreen(src) {
+//Função de abrir imagem em tela cheia.
+export function abrirTelaCheia(src) {
   const img = document.getElementById("lightbox-img");
   img.src = src;
   document.getElementById("lightbox").style.display = "flex";
 }
 
-export function closeFullscreen() {
+// Função para fechar a tela cheia
+export function fechaTela() {
   document.getElementById("lightbox").style.display = "none";
 }
 
-
-
-// function verificarTipoDispositivo() {
-//   return 'ontouchstart' in window ? 'mobile' : 'desktop';
-// }
-
-// export function button_contact() {
-//   const tipoDispositivo = verificarTipoDispositivo();
-//   const contact_button = document.querySelector(".contact-button");
-//   const whats = document.getElementById("whats");
-//   const email = document.getElementById("email");
-
-//   if(tipoDispositivo === 'mobile') {
-//     contact_button.addEventListener('click', function () {
-//       window.open(whats.href, '_blank');
-//     });
-//   } else {
-//     contact_button.addEventListener('click', function () {
-//       window.open(email.href, '_blank');
-//     });
-//   }
-
-// }
-
+//Acordion
 export function accordion() {
   const accordionHeaders = document.querySelectorAll('.accordion-header');
 
@@ -41,7 +20,7 @@ export function accordion() {
       const content = this.nextElementSibling;
       const isActive = this.classList.contains('active');
 
-      console.log(content);
+      // console.log(content);
 
       accordionHeaders.forEach(otherHeader => {
         if(otherHeader !== this) {
@@ -52,10 +31,12 @@ export function accordion() {
 
       this.classList.toggle('active');
 
+      // Define a altura do conteúdo: colapsa se ativo, expande se inativo
       content.style.maxHeight = isActive ? '0' : content.scrollHeight + 'px';
 
       if(!isActive) {
         setTimeout(() => {
+          // Evento de scroll suave até o primeiro elemento <h3>
           const targetHeading = content.querySelector('h3');
           if(targetHeading) {
             targetHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -68,7 +49,7 @@ export function accordion() {
   });
 }
 
-//Simula ação de click no accordion.
+//Simula ação de click no accordion, função para chamar em casos isolados de links
 export function abrirAccordionHome(targetId) {
   const target = document.getElementById(targetId);
   target.click();

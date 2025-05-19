@@ -1,6 +1,6 @@
 import {
-  openFullscreen,
-  closeFullscreen,
+  abrirTelaCheia,
+  fechaTela,
   accordion,
   abrirAccordionHome,
 } from "./animacoes.js";
@@ -14,14 +14,14 @@ async function carregarPagina(caminho) {
     const conteudoDiv = document.getElementById("pagina");
     conteudoDiv.innerHTML = html;
 
-    await new Promise((resolve) => setTimeout(resolve, 0));
 
     accordion();
 
+    //Se imagem-info(imagem contida no accordion) for clicada, chama a função abrirTelaCheia.
     const imagem = conteudoDiv.querySelector(".image-info");
     if (imagem) {
       imagem.addEventListener("click", () => {
-        openFullscreen(imagem.src);
+        abrirTelaCheia(imagem.src);
       });
     }
 
@@ -37,6 +37,7 @@ async function carregarPagina(caminho) {
   }
 }
 
+//Adiciona evento de click no meu li contido no li.card_liHome
 document.addEventListener("DOMContentLoaded", () => {
   const lis = document.querySelectorAll("li.card_liHome");
   
@@ -47,17 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (link) {
         e.preventDefault();
 
-        const href = link.getAttribute("href");
-        const targetId = href.split("#")[1];
-        const caminho = href.split("#")[0];
+        const href = link.getAttribute("href"); // Pega o valor completo do atributo href
+        const targetId = href.split("#")[1]; // Pega o ID do destino após o "#"
+        const caminho = href.split("#")[0]; // Pega o caminho da URL antes do "#"
 
         carregarPagina(caminho).then(() => {
           if (targetId) {
             const tryClick = () => {
               const target = document.getElementById(targetId);
               if (target) {
-                requestAnimationFrame(() => {
-                  target.click();
+                requestAnimationFrame(() => { 
+                  target.click(); //Simula click no accordion com o ID referente.
                 });
               } else {
                 setTimeout(tryClick, 50);
@@ -71,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-window.openFullscreen = openFullscreen;
-window.closeFullscreen = closeFullscreen;
+window.openFullscreen = abrirTelaCheia;
+window.closeFullscreen = fechaTela;
 window.carregarPagina = carregarPagina;
 window.accordion = accordion;
 window.abrirAccordionHome = abrirAccordionHome;

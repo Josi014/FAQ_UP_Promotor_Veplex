@@ -23,12 +23,6 @@ body {
     user-select: none;
     -webkit-user-drag: none;
     overflow-x: hidden;
-
-    /* background: linear-gradient(
-        180deg,
-        rgba(22, 123, 215, 1) 0%,
-        #3db4e7 40%,
-        #8cdc24 100%); */
 }
 
 .container {
@@ -102,10 +96,6 @@ main {
     width: 100%;
 }
 
-/* .accordion-item {
-    border-left: 5px solid var(--tertiary-blue);
-} */
-
 .accordion-item:last-child {
     border-bottom: none;
 }
@@ -141,10 +131,6 @@ main {
 .accordion-header.active i {
     transform: rotate(180deg);
 }
-
-/* .accordion-header span {
-    font-size: 1.2rem;
-} */
 
 .accordion-content {
     max-height: 0;
@@ -256,7 +242,6 @@ main {
 
 #menu img {
     width: 25px;
-    /* height: 20px; */
     object-fit: contain;
     user-select: none;
     -webkit-user-drag: none;
@@ -336,25 +321,6 @@ main {
     position: relative;
 }
 
-/* .toggle-btn {
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(4p);
-    color: #e5ff24;
-    border: none;
-    font-size: 30px;
-    font-weight: bolder;
-    position: fixed;
-    width: 100px;
-    height: 100vh;
-    z-index: 9999;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 5px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #bdd318;
-    top: 50%;
-    transform: translateY(-50%);
-} */
 
 .toggle-btn {
     position: absolute;
@@ -389,21 +355,11 @@ body.sidebar-fechado .sidebar-wrapper {
 
 }
 
-/* body:not(.sidebar-fechado) .toggle-bnt-mobile{
-    margin-left: 0;
-    top: 0;
-}
-
-body.sidebar-fechado .toggle-bnt-mobile {
-    margin-left: 0%;
-} */
 
 .image-info {
     width: 300px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-
-    /* margin: 0 0 50px 0; */
 }
 
 .image-info_p {
@@ -496,8 +452,6 @@ figure {
 .topo {
     width: 50px;
     filter: drop-shadow(1px 0 0 rgba(0, 0, 0, 0.9)) drop-shadow(0 1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(-1px 0 0 rgba(0, 0, 0, 0.9)) drop-shadow(2px -1px 0 rgba(0, 0, 0, 0.9));
-    /* filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.9)); */
-
 }
 
 
@@ -532,7 +486,6 @@ figure {
 
 .home {
     background: linear-gradient(100deg, #0e6bcd 0%, #40b4e9 40%);
-    /* background-image: url(/images/images_app/new-topo-flip2.png); */
     padding: 3% 3% 5%;
     margin: 20px auto;
     width: 100vw;
@@ -595,6 +548,7 @@ figure {
     }
 }
 
+
 @media (max-width: 768px) {
     body {
         -webkit-tap-highlight-color: transparent;
@@ -634,16 +588,9 @@ figure {
 
     }
 
-    /* .contact-section{
-        padding: 30px 0;
-
-    } */
-
     .faq-container {
         margin: 0;
         margin: 100px 0 0;
-        /* margin-top: 40px; */
-        /* margin-bottom: 100px; */
     }
 
     .container-info {
@@ -762,14 +709,9 @@ figure {
         font-size: 1.5rem;
     }
 
-    /* .arquivo_a {
-        font-size: 8px;
-    } */
-
     .faq-container {
         margin: 0;
         margin-top: 40px;
-        /* margin-bottom: 100px; */
     }
 
     .logo_menu {
