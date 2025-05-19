@@ -581,13 +581,16 @@ figure {
 
 }
 
+.p_abriir{
+    cursor: pointer;
+}
 
-@media (max-width: 1366px){
-    .carregar-pagina{
+@media (max-width: 1366px) {
+    .carregar-pagina {
         font-size: 1.2rem;
     }
 
-    .accordion-content p{
+    .accordion-content p {
         font-size: 1rem;
     }
 }
@@ -732,13 +735,18 @@ figure {
         padding: 30px;
     }
 
-    .carregar-pagina{
+    .carregar-pagina {
         font-size: 100%;
 
     }
 
     .accordion-content p {
         font-size: 1rem;
+    }
+
+
+    .div_footer {
+        margin-bottom: 60px;
     }
 }
 

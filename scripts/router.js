@@ -39,10 +39,11 @@ async function carregarPagina(caminho) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const lis = document.querySelectorAll("li.card_liHome");
-
+  
   lis.forEach((li) => {
     li.addEventListener("click", function (e) {
       const link = li.querySelector("a.carregar-pagina");
+  
       if (link) {
         e.preventDefault();
 
