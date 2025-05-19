@@ -26,9 +26,9 @@ async function carregarPagina(caminho) {
     }
 
     // Aguarda uma pequena pausa para garantir que os DOMs estejam processados
-    await new Promise((resolve) => setTimeout(resolve, 100)); // <-- adiciona isso
+    await new Promise((resolve) => setTimeout(resolve, 100)); 
 
-    return true; // sucesso!
+    return true; 
   } catch (erro) {
     console.error("Erro ao carregar a página:", erro);
     document.getElementById("pagina").innerHTML =

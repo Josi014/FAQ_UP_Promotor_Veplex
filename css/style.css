@@ -22,6 +22,8 @@ body {
     line-height: 1.6;
     user-select: none;
     -webkit-user-drag: none;
+    overflow-x: hidden;
+
     /* background: linear-gradient(
         180deg,
         rgba(22, 123, 215, 1) 0%,
@@ -41,7 +43,7 @@ header {
     background: url(/images/images_app/new-topo-home.jpg) no-repeat center center;
     background-size: cover;
     color: var(--white);
-    padding: 20px 0;
+    padding: 50px 0;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -84,7 +86,6 @@ header h1 {
 
 main {
     flex: 1;
-    padding: 5px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -526,27 +527,45 @@ figure {
     align-items: center;
 }
 
+.home{ 
+    background: linear-gradient(#2d98de, #0e6bcd);
+    padding: 30px;
+    margin: 20px auto;
+    width: 100vw; 
+    position: relative;
+    box-sizing: border-box;
+
+}
+
 .title_home{
-    color: var(--tertiary-blue);
+    text-align: center;
+    color: white;
     font-size: 3rem;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
 }
 
-ul {
+.ul-home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
     padding: 0; 
     margin: 0;  
+    z-index: 1;
   }
   
 .card_liHome{
+    background-color: white;
     margin-top: 20px;
     padding: 20px;
+    width: 50%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid var(--tertiary-blue);
+    border-left: 5px solid var(--secondary-green);
 }
 
 .card_liHome:hover{
-    border-color: var(--secondary-green);
+    border-color: var(--tertiary-blue);
 }
 
 .carregar-pagina{
@@ -558,6 +577,10 @@ ul {
 @media (max-width: 768px) {
     body {
         -webkit-tap-highlight-color: transparent;
+    }
+
+    header{
+        padding: 20px 0;
     }
 
     header h1 {
@@ -653,6 +676,11 @@ ul {
         margin-top: 40px;
     }
 
+
+    .logo_menu {
+        height: 100px;
+    }
+
     .accordion-content h3 {
         font-size: 1.5rem;
     }
@@ -673,9 +701,14 @@ ul {
     .title_home{
         font-size: 2rem;
     }
+
+
+    .card_liHome{
+        width: 100%;
+    }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 440px) {
     .logo-container {
         flex-direction: column;
         gap: 10px;
