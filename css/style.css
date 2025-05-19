@@ -238,7 +238,7 @@ main {
     border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
-#menu li div{
+#menu li div {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -311,20 +311,20 @@ main {
 
 }
 
-.div_footer{
+.div_footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: auto;
 }
 
-.footerMenu{
+.footerMenu {
     margin-top: auto;
     padding: 20px 0;
 }
 
 
-.logo_footerMenu{
+.logo_footerMenu {
     background-image: url(/images/images_app/logo-veplex.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -444,6 +444,8 @@ figure {
     margin-bottom: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    user-select: text;
+
 }
 
 .lightbox {
@@ -527,17 +529,17 @@ figure {
     align-items: center;
 }
 
-.home{ 
-    background: linear-gradient(#2d98de, #0e6bcd);
-    padding: 30px;
+.home {
+    background: linear-gradient(100deg,rgb(48,161,227) 0%, #40b4e9 40%, #0e6bcd 80%);
+    padding: 30px 30px 50px;
     margin: 20px auto;
-    width: 100vw; 
+    width: 100vw;
     position: relative;
     box-sizing: border-box;
 
 }
 
-.title_home{
+.title_home {
     text-align: center;
     color: white;
     font-size: 3rem;
@@ -550,12 +552,12 @@ figure {
     flex-direction: column;
     align-items: center;
     list-style: none;
-    padding: 0; 
-    margin: 0;  
+    padding: 0;
+    margin: 0;
     z-index: 1;
-  }
-  
-.card_liHome{
+}
+
+.card_liHome {
     background-color: white;
     margin-top: 20px;
     padding: 20px;
@@ -564,11 +566,11 @@ figure {
     border-left: 5px solid var(--secondary-green);
 }
 
-.card_liHome:hover{
+.card_liHome:hover {
     border-color: var(--tertiary-blue);
 }
 
-.carregar-pagina{
+.carregar-pagina {
     text-decoration: none;
     color: var(--primary-blue);
     font-weight: bold;
@@ -579,7 +581,7 @@ figure {
         -webkit-tap-highlight-color: transparent;
     }
 
-    header{
+    header {
         padding: 20px 0;
     }
 
@@ -689,24 +691,33 @@ figure {
         font-size: 1rem;
     }
 
-    .topo{
+    .topo {
         width: 40px;
     }
 
     #menu img {
         width: 20px;
     }
- 
 
-    .title_home{
+
+    .title_home {
         font-size: 2rem;
     }
 
 
-    .card_liHome{
+    .card_liHome {
         width: 100%;
+        padding: 15px;
     }
+
+    .home {
+        padding: 30px;
+    }
+
+   
 }
+
+
 
 @media (max-width: 440px) {
     .logo-container {
@@ -733,7 +744,7 @@ figure {
     }
 
 
-    .title_home{
+    .title_home {
         font-size: 1.5rem;
     }
 
