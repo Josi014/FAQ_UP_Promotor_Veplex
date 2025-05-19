@@ -68,10 +68,8 @@ export function accordion() {
   });
 }
 
-
+//Simula ação de click no accordion.
 export function abrirAccordionHome(targetId) {
-  console.log(targetId)
   const target = document.getElementById(targetId);
   target.click();
-
 }

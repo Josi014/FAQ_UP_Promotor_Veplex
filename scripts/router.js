@@ -1,10 +1,14 @@
-import { openFullscreen, closeFullscreen, accordion, abrirAccordionHome } from './animacoes.js';
-
+import {
+  openFullscreen,
+  closeFullscreen,
+  accordion,
+  abrirAccordionHome,
+} from "./animacoes.js";
 
 async function carregarPagina(caminho) {
   try {
     const resposta = await fetch(caminho);
-    if(!resposta.ok) throw new Error(`Erro ao carregar: ${resposta.status}`);
+    if (!resposta.ok) throw new Error(`Erro ao carregar: ${resposta.status}`);
 
     const html = await resposta.text();
     const conteudoDiv = document.getElementById("pagina");
@@ -13,50 +17,58 @@ async function carregarPagina(caminho) {
     await new Promise((resolve) => setTimeout(resolve, 0));
 
     accordion();
-    // button_contact();
-
 
     const imagem = conteudoDiv.querySelector(".image-info");
-    if(imagem) {
+    if (imagem) {
       imagem.addEventListener("click", () => {
         openFullscreen(imagem.src);
       });
     }
 
+    // Aguarda uma pequena pausa para garantir que os DOMs estejam processados
+    await new Promise((resolve) => setTimeout(resolve, 100)); // <-- adiciona isso
 
-
-  } catch(erro) {
+    return true; // sucesso!
+  } catch (erro) {
     console.error("Erro ao carregar a página:", erro);
-    document.getElementById("pagina").innerHTML = "<p>Erro ao carregar página.</p>";
+    document.getElementById("pagina").innerHTML =
+      "<p>Erro ao carregar página.</p>";
+    return false;
   }
-
-
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  const lis = document.querySelectorAll('li.card_liHome');
+  const lis = document.querySelectorAll("li.card_liHome");
 
-  lis.forEach(li => {
+  lis.forEach((li) => {
     li.addEventListener("click", function (e) {
-      const link = li.querySelector('a.carregar-pagina');
-      if(link) {
+      const link = li.querySelector("a.carregar-pagina");
+      if (link) {
         e.preventDefault();
-        const caminhoOrigin = link.getAttribute("href");
-        carregarPagina(caminhoOrigin);
 
         const href = link.getAttribute("href");
         const targetId = href.split("#")[1];
         const caminho = href.split("#")[0];
-  
+
         carregarPagina(caminho).then(() => {
-          if(targetId) abrirAccordionHome(targetId);
+          if (targetId) {
+            const tryClick = () => {
+              const target = document.getElementById(targetId);
+              if (target) {
+                requestAnimationFrame(() => {
+                  target.click();
+                });
+              } else {
+                setTimeout(tryClick, 50);
+              }
+            };
+            tryClick();
+          }
         });
       }
     });
   });
 });
-
 
 window.openFullscreen = openFullscreen;
 window.closeFullscreen = closeFullscreen;
