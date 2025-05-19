@@ -43,7 +43,7 @@ header {
     background: url(/images/images_app/new-topo-home.jpg) no-repeat center center;
     background-size: cover;
     color: var(--white);
-    padding: 50px 0;
+    padding: 5% 0;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -119,7 +119,7 @@ main {
     background-color: var(--white);
     border: none;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-blue);
     cursor: pointer;
@@ -142,9 +142,9 @@ main {
     transform: rotate(180deg);
 }
 
-.accordion-header span {
+/* .accordion-header span {
     font-size: 1.2rem;
-}
+} */
 
 .accordion-content {
     max-height: 0;
@@ -157,11 +157,12 @@ main {
 .accordion-content p {
     padding: 0 0 20px 0;
     color: var(--dark-gray);
+    font-size: 1.5rem;
 }
 
 .contact-section {
     text-align: center;
-    padding: 100px 0;
+    padding: 10% 0;
 }
 
 .contact-section h2 {
@@ -388,14 +389,14 @@ body.sidebar-fechado .sidebar-wrapper {
 
 }
 
-body:not(.sidebar-fechado) .toggle-bnt-mobile {
+/* body:not(.sidebar-fechado) .toggle-bnt-mobile{
     margin-left: 0;
     top: 0;
 }
 
 body.sidebar-fechado .toggle-bnt-mobile {
     margin-left: 0%;
-}
+} */
 
 .image-info {
     width: 300px;
@@ -432,7 +433,7 @@ figure {
     display: flex;
     width: 100%;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     text-align: justify;
     text-justify: inter-word;
 }
@@ -530,8 +531,9 @@ figure {
 }
 
 .home {
-    background: linear-gradient(100deg,rgb(48,161,227) 0%, #40b4e9 40%, #0e6bcd 80%);
-    padding: 30px 30px 50px;
+    background: linear-gradient(100deg, #0e6bcd 0%, #40b4e9 40%);
+    /* background-image: url(/images/images_app/new-topo-flip2.png); */
+    padding: 3% 3% 5%;
     margin: 20px auto;
     width: 100vw;
     position: relative;
@@ -541,6 +543,7 @@ figure {
 
 .title_home {
     text-align: center;
+    margin-bottom: 2%;
     color: white;
     font-size: 3rem;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
@@ -559,8 +562,8 @@ figure {
 
 .card_liHome {
     background-color: white;
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 2%;
+    padding: 2%;
     width: 50%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-left: 5px solid var(--secondary-green);
@@ -574,6 +577,19 @@ figure {
     text-decoration: none;
     color: var(--primary-blue);
     font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+
+@media (max-width: 1366px){
+    .carregar-pagina{
+        font-size: 1.2rem;
+    }
+
+    .accordion-content p{
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -708,18 +724,27 @@ figure {
     .card_liHome {
         width: 100%;
         padding: 15px;
+        margin: 2%;
+
     }
 
     .home {
         padding: 30px;
     }
 
-   
+    .carregar-pagina{
+        font-size: 100%;
+
+    }
+
+    .accordion-content p {
+        font-size: 1rem;
+    }
 }
 
 
 
-@media (max-width: 440px) {
+@media (max-width: 480px) {
     .logo-container {
         flex-direction: column;
         gap: 10px;

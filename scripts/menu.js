@@ -111,12 +111,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const toggleBtn = document.getElementById('toggleSidebar');
   const sidebar = document.getElementById('sidebar');
+  const abrirMenuHome = document.getElementById('abra-menu');
 
-  if(toggleBtn && sidebar) {
+  if(toggleBtn && sidebar || abrirMenuHome) {
     toggleBtn.addEventListener("click", () => {
       document.body.classList.toggle("sidebar-fechado");
     });
     sidebar.addEventListener("click", () => {
+      document.body.classList.toggle("sidebar-fechado");
+    });
+    abrirMenuHome.addEventListener("click", () => {
       document.body.classList.toggle("sidebar-fechado");
     });
   } else {
