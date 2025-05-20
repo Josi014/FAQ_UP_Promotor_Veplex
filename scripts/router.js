@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     root.setAttribute("data-theme", theme);
     // localStorage.setItem("theme", theme);
 
-
     if (toggleBtn) {
       toggleBtn.classList.remove("bi-sun");
       toggleBtn.classList.remove("bi-moon");
