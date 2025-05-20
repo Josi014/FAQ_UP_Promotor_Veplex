@@ -17,16 +17,6 @@ async function carregarPagina(caminho) {
 
     accordion();
    
-    const toggleTheme = document.getElementById("toggleTheme");
-    // toggleTheme.addEventListener("click", changeTheme);
-
-    if(toggleTheme){
-      toggleTheme.addEventListener("click", () => {
-        changeTheme();
-      })
-    }
-
-
     //Se imagem-info(imagem contida no accordion) for clicada, chama a função abrirTelaCheia.
     const imagem = conteudoDiv.querySelector(".image-info");
     if (imagem) {
@@ -89,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setTheme = (theme) => {
     root.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    // localStorage.setItem("theme", theme);
 
 
     if (toggleBtn) {
