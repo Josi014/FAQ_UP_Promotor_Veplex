@@ -90,6 +90,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const setTheme = (theme) => {
     root.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
+
+
+    if (toggleBtn) {
+      toggleBtn.classList.remove("bi-sun");
+      toggleBtn.classList.remove("bi-moon");
+    
+    
+      if (theme === "light") {
+        toggleBtn.classList.add("bi-sun");
+      } else {
+        toggleBtn.classList.add("bi-moon");
+      }
+    }
   };
 
   const toggleTheme = () => {
