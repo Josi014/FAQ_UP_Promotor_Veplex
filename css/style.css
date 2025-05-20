@@ -17,26 +17,30 @@
     --color-menu: white;
     --color-arquivo: #525252;
     --icone-menu: invert(0);
+    --img_footer: url(/images/images_app/logo-veplex.png);
 }
 
 :root[data-theme='dark'] {
-    --primary-blue: rgba(22, 123, 215, 1);
-    --color-botao: #8cdc24;
-    --colorLattersTAccordion: #3db4e7;
-    --colorh: lightgray;
-    --title: lightgray;
-    --fundo-card-accordion: #333;
-    --color-pAccordion: lightgray;
-    --efeito-hover: lightgray;
-    --fundo: #111217;
-    --fundo-card: white;
-    --card-home: linear-gradient(100deg, #1486ff 0%, #1e80ac 40%);
-    --sombra: 0 4px 6px rgba(255, 255, 255, 0.589);
-    --color-titleAccordionH3: white;
-    --color-legenda: white;
-    --color-menu: #333;
-    --color-arquivo: lightgray;
-    --icone-menu: invert(100%);
+    --primary-blue: rgba(65, 157, 236, 1);
+    --color-botao: #6daf15;
+    --colorLattersTAccordion: white;
+    --colorh: white;
+    --title: #1a1a1a;
+    --fundo: #121212;
+    --fundo-card: #1e1e1e;
+    --fundo-card-accordion: #1e1e1e;
+    --color-pAccordion: #e0e0e0;
+    --efeito-hover: #333333;
+    --color-legenda: #b0b0b0;
+    --card-home: linear-gradient(100deg, #084696 0%, #1a8bc0 40%);
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --color-accordion: rgba(65, 157, 236, 0.15);
+    --color-titleAccordionH3: #e0e0e0;
+    --color-menu: #1e1e1e;
+    --color-arquivo: #b8b8b8;
+    --icone-menu: invert(1);
+    --camada-escura: brightness(70%);
+    --img_footer: url(/images/veplex-logo-2.png);
 
 }
 
@@ -59,7 +63,7 @@ html[data-theme='light'] .technologies__logo {
 
 body {
     flex: 1;
-    background-color: var(--lfundo-body);
+    /* background-color: var(--lfundo-body); */
     line-height: 1.6;
     user-select: none;
     -webkit-user-drag: none;
@@ -74,14 +78,24 @@ body {
 
 }
 
-
 header {
-    background: url(/images/images_app/new-topo-home.jpg) no-repeat center center;
-    background-size: cover;
+    position: relative;
     color: var(--white);
     padding: 5% 0;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    overflow: hidden; 
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url(/images/images_app/new-topo-home.jpg) no-repeat center center;
+    background-size: cover;
+    filter: var(--camada-escura); 
+    z-index: -1;
 }
 
 .logo-container {
@@ -101,7 +115,7 @@ header {
 header h1 {
     font-size: 2.5rem;
     margin-top: 10px;
-    color: var(--title);
+    color: white;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
 
 }
@@ -188,7 +202,7 @@ main {
 
 .accordion-content p {
     padding: 0 0 20px 0;
-    color: var(--color-pAccordion);
+    color: white;
     font-size: 1.5rem;
 }
 
@@ -359,7 +373,7 @@ main {
 
 
 .logo_footerMenu {
-    background-image: url(/images/images_app/logo-veplex.png);
+    background-image: var(--img_footer);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -450,7 +464,7 @@ figure {
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     user-select: text;
-
+    background-color: #333;
 }
 
 .lightbox {
@@ -544,7 +558,7 @@ figure {
 .title_home {
     text-align: center;
     margin-bottom: 2%;
-    color: var(--title);
+    color: white;
     font-size: 3rem;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
 }
@@ -583,6 +597,20 @@ figure {
 
 .p_abriir {
     cursor: pointer;
+}
+
+.header__toggle {
+    position: absolute;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+
+.bi {
+    color: white;
+    font-size: 25px;
 }
 
 @media (max-width: 1366px) {
