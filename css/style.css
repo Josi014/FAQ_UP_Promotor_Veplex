@@ -19,6 +19,8 @@
     --icone-menu: invert(0);
     --img_footer: url(/images/images_app/logo-veplex.png);
     --color-pCard: #333;
+    --voltar_inicio: black;
+
 }
 
 :root[data-theme='dark'] {
@@ -43,7 +45,7 @@
     --camada-escura: brightness(70%);
     --img_footer: url(/images/veplex-logo-2.png);
     --color-pCard: white;
-
+    --voltar_inicio: white;
 }
 
 
@@ -505,19 +507,6 @@ figure {
     cursor: pointer;
 }
 
-.button_back_to_top {
-    position: fixed;
-    right: 20px;
-    bottom: 5px;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-.button_back_to_top ul {
-    list-style-type: none;
-
-}
-
 .topo {
     width: 50px;
     filter: drop-shadow(1px 0 0 rgba(0, 0, 0, 0.9)) drop-shadow(0 1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(-1px 0 0 rgba(0, 0, 0, 0.9)) drop-shadow(2px -1px 0 rgba(0, 0, 0, 0.9));
@@ -630,6 +619,41 @@ figure {
     box-shadow: 0 0 25px rgba(0,0,0,0.8);
 }
 
+.voltar_inicio_tela{
+    display: none;
+}
+
+.ativar_voltar_inicio_tela{
+    display: block;
+    position: fixed;
+    bottom: -15px;
+    /* left: 50%; */
+    z-index: 1000;
+    background-color: transparent;
+    /* width: 50px; */
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    padding: 50px 0 70px 0;
+
+}
+
+.vtopo_da_Tela:hover {
+    opacity: 0.8;
+}
+
+.bi2 {
+    font-size: 30px;
+    color: var(--voltar_inicio);
+    opacity: 0.6;
+}
+
+.container_voltar_inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 @media (max-width: 1366px) {
     .carregar-pagina {
         font-size: 1.2rem;
@@ -639,7 +663,6 @@ figure {
         font-size: 1rem;
     }
 }
-
 
 @media (max-width: 760px) {
     body {
@@ -707,10 +730,6 @@ figure {
         margin: 0 auto;
         width: 200px;
         height: auto;
-    }
-
-    .button_back_to_top {
-        bottom: 20px;
     }
 
     .text-d {
@@ -818,8 +837,8 @@ figure {
     }
 
 }
-/* 
-@media (max-width: 300px) {
+
+/* @media (max-width: 300px) {
     .contact-section h2 {
         font-size: 1.2rem;
     }

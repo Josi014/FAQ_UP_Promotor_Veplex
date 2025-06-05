@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setTheme = (theme) => {
     root.setAttribute("data-theme", theme);
-    // localStorage.setItem("theme", theme);
+    localStorage.setItem("theme", theme);
 
     if (toggleBtn) {
       toggleBtn.classList.remove("bi-sun");
@@ -104,6 +104,30 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn?.addEventListener("click", toggleTheme);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener('scroll', () => {
+    const scrollHeight = document.documentElement.scrollHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    const clientHeight = document.documentElement.clientHeight;
+
+    let alturaMax = document.documentElement.scrollHeight - window.innerHeight; //Máximo que pode ser scrollado
+
+    let faltando = alturaMax - (alturaMax * 0.5);
+
+    const elemento = document.querySelector("#voltar_inicio_tela");
+
+    if (scrollTop > faltando) {
+      elemento.classList.add("ativar_voltar_inicio_tela");
+      elemento.classList.remove("voltar_inicio_tela");
+      elemento.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    } else{
+      elemento.classList.remove("ativar_voltar_inicio_tela");
+      elemento.classList.add("voltar_inicio_tela");
+    }
+  });
+});
 
 
 window.openFullscreen = abrirTelaCheia;
