@@ -106,9 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', () => {
-    const scrollHeight = document.documentElement.scrollHeight;
+    // const scrollHeight = document.documentElement.scrollHeight;
     const scrollTop = document.documentElement.scrollTop;
-    const clientHeight = document.documentElement.clientHeight;
+    // const clientHeight = document.documentElement.clientHeight;
 
     let alturaMax = document.documentElement.scrollHeight - window.innerHeight; //Máximo que pode ser scrollado
 
