@@ -3,31 +3,69 @@
 
 <head>
     <meta charset="UTF-8">
-    <link type="image/x-icon" href="/images/veplex_icon.png" rel="shortcut icon">
+    <link type="image/x-icon" href="./images/veplex_icon_1.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <title>UP Promotor</title>
 
 </head>
 
-<body id="back_to_top">
+<body class="sidebar-fechado">
     <header>
         <div class=" header__toggle">
             <i id="toggleTheme" class="bi bi-sun"></i>
         </div>
         <div class="logo-container">
-            <img src="https://www.veplex.com.br/assets/veplex-logo.png" alt="Veplex Logo" class="logo">
-            <img src="https://www.veplex.com.br/assets/up-promotor.png" alt="Up Promotor Logo" class="logo">
+            <img src="./images/veplex-logo1.png" alt="Veplex Logo" class="logo">
+            <img src="./images/up-promotor.png" alt="Up Promotor Logo" class="logo">
         </div>
         <h1>UP Promotor</h1>
     </header>
     <aside class="sidebar-wrapper" id="sidebar">
-        <nav>
-            <ul class="nav flex-column" id="menu"></ul>
-        </nav>
+        <aside id="sidebar">
+            <nav id="menu">
+                <div>
+                    <div class="logo_menu"></div>
+                    <div class="div_titleHeader">
+                        <h1 class="title_header">FAQ UP PROMOTOR</h1>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <img class="img_itemMenu" src="./images/imgMenu/passos_iniciais.png" alt="page4">
+                        <a href="./Pages/passos_iniciais.html" class="file_a" id="elementoMenu">
+                            Passos iniciais
+                        </a>
+                    </li>
+                    <li>
+                        <img class="img_itemMenu" src="./images/imgMenu/clientes.png" alt="page2">
+                        <a href="./Pages/clientes.html" class="file_a" id="elementoMenu">
+                            Clientes
+                        </a>
+                    </li>
+
+                    <li>
+                        <img class="img_itemMenu" src="./images/imgMenu/erros_frequentes.png" alt="page3">
+                        <a href="./Pages/erros_frequentes.html" class="file_a" id="elementoMenu">
+                            Erros Frequentes
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="div_footer">
+                    <footer class="footerMenu">
+                        <div class="logo_footerMenu"></div>
+                    </footer>
+                </div>
+            </nav>
+        </aside>
     </aside>
 
     <div class="toggle-bnt-mobile">
@@ -44,15 +82,15 @@
                 <h1 class="title_home">Perguntas Frequentes</h1>
                 <ul class="ul-home">
                     <li class="card_liHome">
-                        <a href="/Menus/10.passos_iniciais.html#bater_ponto" class="carregar-pagina">Como bater
+                        <a href="./Pages/passos_iniciais.html#bater_ponto" class="carregar-pagina" onclick="openAccordionHome('bater_ponto')">Como bater
                             ponto?</a>
                     </li>
                     <li class="card_liHome">
-                        <a href="/Menus/2.clientes.html#iniciar_visita" class="carregar-pagina">Como iniciar a
+                        <a href="./Pages/clientes.html#iniciar_visita" class="carregar-pagina" onclick="openAccordionHome('iniciar_visita')">Como iniciar a
                             visita?</a>
                     </li>
                     <li class="card_liHome">
-                        <a href="/Menus/5.erros_frequentes.html#erros" class="carregar-pagina">Erros frequentes.</a>
+                        <a href="./Pages/erros_frequentes.html#erros" class="carregar-pagina" onclick="openAccordionHome('erros')">Erros frequentes.</a>
                     </li>
                 </ul>
             </div>
@@ -72,20 +110,17 @@
 
     </div>
 
-    <div class="container_voltar_inicio">
-        <button class="voltar_inicio_tela" id="voltar_inicio_tela"><i class="bi2 bi-arrow-up-circle-fill"></i></button>
+    <div class="container_back_start">
+        <button class="return_start_screen" id="return_start_screen"><i class="bi2 bi-arrow-up-circle-fill"></i></button>
     </div>
-    <div id="lightbox" class="lightbox" onclick="fecharTela()">
+    <div id="lightbox" class="lightbox" onclick="closeScreen()">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-
-    <script src="/scripts/menu.js" type="module"></script>
-    <script src="/scripts/router.js" type="module"></script>
-    <script src="/scripts/animacoes.js" type="module"></script>
+   
+    <script src="./scripts/utils.js"></script>
 
 </body>
-<!-- style="max-width: 100vw; max-height: 80vh; width: auto; height: auto; object-fit: contain; box-shadow: 0 0 25px rgba(0,0,0,0.8);"> -->
 
 </html>

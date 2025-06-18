@@ -1,60 +1,60 @@
 :root[data-theme='light'] {
     --primary-blue: rgba(22, 123, 215, 1);
-    --color-botao: #8cdc24;
+    --color-button: #8cdc24;
     --colorLattersTAccordion: #3db4e7;
     --colorh: #3db4e7;
     --title: white;
-    --fundo: #f5f5f5;
-    --fundo-card: white;
-    --fundo-card-accordion: white;
+    --background: #f5f5f5;
+    --background-card: white;
+    --background-card-accordion: white;
     --color-pAccordion: #333;
-    --efeito-hover: lightgray;
-    --color-legenda: gray;
+    --effect-hover: lightgray;
+    --color-caption: gray;
     --card-home: linear-gradient(100deg, #0e6bcd 0%, #40b4e9 40%);
-    --sombra: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow_faq: 0 4px 6px rgba(0, 0, 0, 0.2);
     --color-accordion: rgba(22, 123, 215, 0.05);
     --color-titleAccordionH3: #333;
     --color-menu: white;
-    --color-arquivo: #525252;
-    --icone-menu: invert(0);
-    --img_footer: url(/images/images_app/logo-veplex.png);
+    --color-file: #525252;
+    --icon-menu: invert(0);
+    --img_footer: url(../images/images_app/logo-veplex.png);
     --color-pCard: #333;
-    --voltar_inicio: black;
+    --back_home: black;
 
 }
 
 :root[data-theme='dark'] {
     --primary-blue: rgba(65, 157, 236, 1);
-    --color-botao: #6daf15;
+    --color-button: #6daf15;
     --colorLattersTAccordion: white;
     --colorh: white;
     --title: #1a1a1a;
-    --fundo: #121212;
-    --fundo-card: #333;
-    --fundo-card-accordion: #1e1e1e;
+    --background: #121212;
+    --background-card: #333;
+    --background-card-accordion: #1e1e1e;
     --color-pAccordion: #e0e0e0;
-    --efeito-hover: #333333;
-    --color-legenda: #b0b0b0;
+    --effect-hover: #333333;
+    --color-caption: #b0b0b0;
     --card-home: linear-gradient(100deg, #084696 0%, #1a8bc0 40%);
-    --sombra: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow_faq: 0 4px 6px rgba(0, 0, 0, 0.4);
     --color-accordion: rgba(65, 157, 236, 0.15);
     --color-titleAccordionH3: #e0e0e0;
     --color-menu: #1e1e1e;
-    --color-arquivo: #b8b8b8;
-    --icone-menu: invert(1);
+    --color-file: #b8b8b8;
+    --icon-menu: invert(1);
     --camada-escura: brightness(70%);
-    --img_footer: url(/images/veplex-logo-2.png);
+    --img_footer: url(../images/veplex-logo-2.png);
     --color-pCard: white;
-    --voltar_inicio: white;
+    --back_home: white;
 }
 
 
 html[data-theme='light'] .brand__logo {
-    filter: invert(1);
+    filter: inverted(1);
 }
 
 html[data-theme='light'] .technologies__logo {
-    filter: invert(80%);
+    filter: inverted(80%);
 }
 
 * {
@@ -69,16 +69,19 @@ body {
     flex: 1;
     /* background-color: var(--lfundo-body); */
     line-height: 1.6;
+    overflow-x: hidden;
     user-select: none;
     -webkit-user-drag: none;
-    overflow-x: hidden;
+    /*-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
 }
 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--fundo);
+    background: var(--background);
 
 }
 
@@ -89,16 +92,19 @@ header {
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 0;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 header::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url(/images/images_app/new-topo-home.jpg) no-repeat center center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/images_app/new-topo-home.jpg) no-repeat center center;
     background-size: cover;
-    filter: var(--camada-escura); 
+    filter: var(--camada-escura);
     z-index: -1;
 }
 
@@ -133,7 +139,7 @@ header h1 {
 
 .accordion-content h3 {
     text-align: center;
-    margin-top: 25px;
+    margin: 20px 0;
     font-size: 2rem;
     color: var(--color-titleAccordionH3);
 }
@@ -150,7 +156,7 @@ main {
 
 .faq-container {
     border-radius: 8px;
-    box-shadow: var(--sombra);
+    box-shadow: var(--shadow_faq);
     overflow: hidden;
     margin: 100px 100px 0;
 
@@ -170,7 +176,7 @@ main {
     align-items: center;
     width: 100%;
     padding: 40px;
-    background-color: var(--fundo-card-accordion);
+    background-color: var(--background-card-accordion);
     border: none;
     text-align: left;
     font-size: 1.5rem;
@@ -185,7 +191,7 @@ main {
 
 .accordion-header:hover {
     background-color: var(--color-accordion);
-    border-color: var(--color-botao);
+    border-color: var(--color-button);
 }
 
 .accordion-header i {
@@ -196,11 +202,15 @@ main {
     transform: rotate(180deg);
 }
 
+button:focus {
+    outline: none;
+}
+
 .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background-color: var(--fundo-card-accordion);
+    background-color: var(--background-card-accordion);
     padding: 0 20px;
 }
 
@@ -208,6 +218,7 @@ main {
     padding: 0 0 20px 0;
     color: var(--color-pCard);
     font-size: 1.5rem;
+    margin-top: 10px;
 }
 
 .contact-section {
@@ -227,7 +238,7 @@ main {
 }
 
 .contact-button {
-    background-color: var(--color-botao);
+    background-color: var(--color-button);
     color: white;
     text-decoration: none;
     border: none;
@@ -242,7 +253,7 @@ main {
 }
 
 .contact-button:hover {
-    background-color: var(--efeito-hover);
+    background-color: var(--effect-hover);
     color: var(--colorLattersTAccordion);
 }
 
@@ -287,7 +298,7 @@ main {
 .logo_menu {
     width: 100%;
     height: 150px;
-    background-image: url(/images/images_app/new-topo-flip.jpg);
+    background-image: url(../images/images_app/new-topo-flip.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -316,55 +327,28 @@ main {
     object-fit: contain;
     user-select: none;
     -webkit-user-drag: none;
-    filter: var(--icone-menu);
+    filter: var(--icon-menu);
 }
 
 #menu li:hover {
-    filter: invert(64%) sepia(93%) saturate(676%) hue-rotate(166deg) brightness(97%) contrast(92%);
+    filter: inverted(64%) sepia(93%) saturate(676%) hue-rotate(166deg) brightness(97%) contrast(92%);
     color: var(--colorLattersTAccordion);
 }
 
-/* .submenu {
-    list-style-type: none;
-    padding: 0;
-    display: none;
-    transition: background 0.3s;
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-}
-
-.submenu li {
-    background-color: rgba(165, 165, 165, 3) !important;
-    backdrop-filter: blur(4px);
-    padding: 10px 0 10px 25px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-} */
-
-/* .submenu li ul {
-    background-color: rgba(151, 145, 145, 0.829) !important;
-    ;
-    backdrop-filter: blur(4px);
-} */
-
-/* 
-.submenu a {
-    text-decoration: none;
-    color: #e0e0e0;
-    display: block;
-    width: 100%;
-
-} */
-
-.arquivo_a {
+.file_a {
     font-size: 15px;
     text-decoration: none;
-    color: var(--color-arquivo);
+    color: var(--color-file);
     padding: 2px;
 }
 
-.arquivo_a:hover {
+ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.file_a:hover {
     text-decoration: none;
 
 }
@@ -424,9 +408,7 @@ main {
 
 body.sidebar-fechado .sidebar-wrapper {
     transform: translateX(-100%);
-
 }
-
 
 .image-info {
     width: 300px;
@@ -440,41 +422,39 @@ body.sidebar-fechado .sidebar-wrapper {
     border-radius: 12px;
 }
 
-.container-info {
+.container-info,
+.container-info-inverted {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
     flex-wrap: nowrap;
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+
+.container-info-inverted {
+    flex-direction: row-reverse;
+
 }
 
 figure {
     margin: 0 0 50px 0;
 }
 
-.legenda {
-    color: var(--color-legenda);
+.caption {
+    color: var(--color-caption);
     font-size: 12px;
     text-align: center;
 }
 
-
-.text-d {
+.text-card {
     display: flex;
-    width: 100%;
-    align-items: center;
-    /* height: 100vh; */
+    width: 50%;
     text-align: justify;
-    text-justify: inter-word;
-}
-
-.card {
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
     user-select: text;
-    background-color: var(--fundo-card);
 }
 
 .lightbox {
@@ -507,15 +487,15 @@ figure {
     cursor: pointer;
 }
 
-.topo {
+.top {
     width: 50px;
     filter: drop-shadow(1px 0 0 rgba(0, 0, 0, 0.9)) drop-shadow(0 1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(-1px 0 0 rgba(0, 0, 0, 0.9)) drop-shadow(2px -1px 0 rgba(0, 0, 0, 0.9));
 }
 
 
-.card_titulo {
+.title_card {
     border-left: 5px solid #3db4e7;
-    background-image: url(/images/images_app/new-topo-flip.png);
+    background-image: url(../images/images_app/new-topo-flip.png);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 100%;
     display: flex;
@@ -524,7 +504,7 @@ figure {
     height: 100px;
 }
 
-.titulo_header {
+.title_header {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -536,7 +516,7 @@ figure {
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
 }
 
-.div_tituloHeader {
+.div_titleHeader {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -572,12 +552,12 @@ figure {
 }
 
 .card_liHome {
-    background-color: var(--fundo-card-accordion);
+    background-color: var(--background-card-accordion);
     margin-top: 2%;
     padding: 2%;
     width: 50%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid var(--color-botao);
+    border-left: 5px solid var(--color-button);
 }
 
 .card_liHome:hover {
@@ -604,26 +584,56 @@ figure {
     margin-right: 10px;
 }
 
-
 .bi {
     color: white;
     font-size: 25px;
 }
 
-.lightbox-content{
-    max-width: 100vw; 
-    max-height: 80vh; 
-    width: auto; 
-    height: auto; 
-    object-fit: contain; 
-    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+.bi2 {
+    font-size: 30px;
+    color: var(--back_home);
+    opacity: 0.6;
 }
 
-.voltar_inicio_tela{
+.bi3 {
+    color: var(--colorh);
+}
+
+.bi-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #3db4e7;
+    background-color: #3db4e7;
+}
+
+.bi-number p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.lightbox-content {
+    max-width: 100vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.return_start_screen {
     display: none;
 }
 
-.ativar_voltar_inicio_tela{
+.activate_back_home_screen {
     display: block;
     position: fixed;
     bottom: -15px;
@@ -638,20 +648,37 @@ figure {
 
 }
 
-.vtopo_da_Tela:hover {
+.top_of_screen:hover {
     opacity: 0.8;
 }
 
-.bi2 {
-    font-size: 30px;
-    color: var(--voltar_inicio);
-    opacity: 0.6;
-}
-
-.container_voltar_inicio{
+.container_back_start {
     display: flex;
     align-items: center;
     justify-content: center
+}
+
+#li {
+    cursor: pointer;
+}
+
+.description_step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 70%;
+}
+
+.sub-title {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 1366px) {
@@ -662,9 +689,19 @@ figure {
     .accordion-content p {
         font-size: 1rem;
     }
+
+    #menu {
+        width: 30%;
+    }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
+    #menu {
+        width: 50%;
+    }
+}
+
+@media (max-width: 780px) {
     body {
         -webkit-tap-highlight-color: transparent;
     }
@@ -708,20 +745,24 @@ figure {
         margin: 100px 0 0;
     }
 
-    .container-info {
+    .container-info,
+    .container-info-inverted {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        padding: 30px;
     }
 
-    .container-info figure {
+    .container-info figure,
+    .container-info-inverted figure {
         text-align: center;
         margin: 0 auto;
         width: auto;
 
     }
 
-    .container-info .figure_p {
+    .container-info .figure_p,
+    .container-info-inverted .figure_p {
         margin-bottom: 30px;
     }
 
@@ -732,8 +773,9 @@ figure {
         height: auto;
     }
 
-    .text-d {
+    .text-card {
         height: 100%;
+        width: 100%;
     }
 
     .toggle-btn {
@@ -741,16 +783,16 @@ figure {
         height: 20px;
     }
 
-    .arquivo_a {
+    .file_a {
         font-size: 12px;
     }
 
-    .card_titulo {
+    .title_card {
         background-size: cover;
         background-position: center;
     }
 
-    .titulo_header {
+    .title_header {
         font-size: 20px;
         margin-top: 40px;
     }
@@ -768,7 +810,7 @@ figure {
         font-size: 1rem;
     }
 
-    .topo {
+    .top {
         width: 40px;
     }
 
@@ -807,7 +849,13 @@ figure {
         margin-bottom: 60px;
     }
 
+    .bi-number {
+        left: 0;
+    }
 
+    .description_step {
+        width: 100%;
+    }
 }
 
 
@@ -838,16 +886,16 @@ figure {
 
 }
 
-/* @media (max-width: 300px) {
+@media (max-width: 300px) {
     .contact-section h2 {
         font-size: 1.2rem;
     }
 
-    .titulo_header {
+    .title_header {
         top: 0;
-    }    
+    }
 
-    .lightbox-content{
+    .lightbox-content {
         max-height: 70vh;
     }
-} */
+}

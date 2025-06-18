@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link type="image/x-icon" href="../images/veplex_icon_1.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-icons.css">
+    <title>UP Promotor</title>
+
+</head>
+
+<body class="sidebar-fechado">
+    <header>
+        <div class=" header__toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
+        <div class="logo-container">
+            <img src="../images/veplex-logo1.png" alt="Veplex Logo" class="logo">
+            <img src="../images/up-promotor.png" alt="Up Promotor Logo" class="logo">
+        </div>
+        <h1>UP Promotor</h1>
+    </header>
+
+    <aside class="sidebar-wrapper" id="sidebar">
+        <aside id="sidebar">
+            <nav id="menu">
+                <div>
+                    <div class="logo_menu"></div>
+                    <div class="div_titleHeader">
+                        <h1 class="title_header">FAQ UP PROMOTOR</h1>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <img class="img_itemMenu" src="../images/imgMenu/home.png" alt="page1">
+                        <a href="../index.html" class="file_a" id="elementoMenu">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <img class="img_itemMenu" src="../images/imgMenu/clientes.png" alt="page2">
+                        <a href="../Pages/clientes.html" class="file_a" id="elementoMenu">
+                            Clientes
+                        </a>
+                    </li>
+
+                    <li>
+                        <img class="img_itemMenu" src="../images/imgMenu/erros_frequentes.png" alt="page3">
+                        <a href="../Pages/erros_frequentes.html" class="file_a" id="elementoMenu">
+                            Erros Frequentes
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="div_footer">
+                    <footer class="footerMenu">
+                        <div class="logo_footerMenu"></div>
+                    </footer>
+                </div>
+            </nav>
+        </aside>
+    </aside>
+
+    <div class="toggle-bnt-mobile">
+        <button class="toggle-btn" id="toggleSidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+
+    <div class="container">
+        <main>
+            <div class="faq-container">
+                <div class="accordion">
+
+                    <section class="accordion-item">
+                        <div class="title_card">
+                            <h1 class="title">PASSOS INICIAIS</h1>
+
+                        </div>
+                        <button id="receber_dados" class="accordion-header">
+                            <span>Como receber dados?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h3 id="opcao-dois">Como receber dados?</h3>
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/tela_inicialMenu.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela inicial</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>1</p>
+                                        </div>
+                                        <p class="sub-title">ABRIR MENU</p>
+                                        <p>Na tela inicial localize o botão de menu no canto superior esquerdo e clique
+                                            sobre
+                                            ele.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info-inverted">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/receber_dados/receber_dados2.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela menu</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>2</p>
+                                        </div>
+                                        <p class="sub-title">ENTRAR EM TRANSMISSÃO</p>
+                                        <p>Na tela de menu, clique na opção <strong>"Transmissão"</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/receber_dados/receber_dados3.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela transmissão</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>3</p>
+                                        </div>
+                                        <p class="sub-title">RECEBA DADOS</p>
+                                        <p>Na tela de transmissão, clique na opção <strong>"Receber dados"</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info-inverted">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/receber_dados/receber_dados4.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela receber dados</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>4</p>
+                                        </div>
+                                        <p class="sub-title">AGUARDE</p>
+                                        <p>Aguarde o processo de recebimento de dados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/receber_dados/receber_dados5.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela receber dados</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>5</p>
+                                        </div>
+                                        <p class="sub-title">INICIE EXPEDIENTE</p>
+                                        <p>Após o processo finalizar, poderá iniciar o seu expediente normalmente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="accordion-item">
+                        <button id="bater_ponto" class="accordion-header">
+                            <span>Como bater ponto?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h3 id="opcao-tres">Como bater ponto?</h3>
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/bater_ponto/tela_bater_ponto1.jpeg"
+                                        onclick="openFullScreen(this.src)" alt="Descrição da imagem">
+                                    <figcaption class="caption">Tela inicial</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>1</p>
+                                        </div>
+                                        <p class="sub-title">ACESSE PONTO</p>
+                                        <p>Acesse a opção <strong>"Ponto"</strong> mostrada na imagem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info-inverted">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/bater_ponto/tela_bater_ponto2.jpeg"
+                                        onclick="openFullScreen(this.src)" alt="Descrição da imagem">
+                                    <figcaption class="caption">Tela ponto</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>2</p>
+                                        </div>
+                                        <p class="sub-title">REGISTRE O PONTO</p>
+                                        <p>Após selecionar a opção <strong>"Ponto"</strong> na tela de registro,
+                                            localize o botão <strong>"Registrar ponto"</strong> e clique nele. Esse
+                                            procedimento registrará automaticamente a entrada, saída ou intervalo,
+                                            conforme o horário atual.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/bater_ponto/tela_bater_ponto3.jpeg"
+                                        onclick="openFullScreen(this.src)" alt="Descrição da imagem">
+                                    <figcaption class="caption">Tela ponto</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>3</p>
+                                        </div>
+                                        <p class="sub-title">RECEBA DADOS</p>
+                                        <p>Caso seja exibida a mensagem <strong>"Receba dados para acessar o
+                                                recurso"</strong>,
+                                            será necessário realizar o processo de <strong><a
+                                                    onclick="openAccordionHome('receber_dados')">"Receber</a>
+                                                dados"</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="accordion-item">
+
+                        <button class="accordion-header">
+                            <span>Como receber Crédito?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h3 id="opcao-um">Como receber Crédito?</h3>
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/tela_inicialMenu.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela inicial</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>1</p>
+                                        </div>
+                                        <p class="sub-title">ABRA O MENU</p>
+                                        <p>Na tela inicial do aplicativo, localize o menu situado no canto superior
+                                            esquerdo
+                                            e clique sobre ele.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info-inverted">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/credito/tela_receber_credito2.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela do menu</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>2</p>
+                                        </div>
+                                        <p class="sub-title">REGISTRE O PONTO</p>
+                                        <p>No menu, localize a opção <strong>"Transmissão"</strong> e clique sobre
+                                            ela.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-d">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-info">
+                                <figure>
+                                    <img class="image-info" src="../images/imgPages/credito/tela_receber_credito3.jpeg"
+                                        onclick="openFullScreen(this.src)">
+                                    <figcaption class="caption">Tela de transmissão</figcaption>
+                                    <hr>
+                                </figure>
+                                <div class="text-card">
+                                    <div class="description_step">
+                                        <div class="bi-number">
+                                            <p>3</p>
+                                        </div>
+                                        <p class="sub-title">RECEBA DADOS</p>
+                                        <p>Por fim, na tela de <strong>"Transmissão"</strong>, localize a opção
+                                            <strong>"Receber
+                                                créditos"</strong>. Os créditos devem ser solicitados previamente ao
+                                            supervisor.
+                                            Caso haja créditos disponíveis, ao pressionar o botão, será exibida a
+                                            mensagem
+                                            "Créditos recebidos com sucesso". Caso contrário, será apresentada a
+                                            mensagem
+                                            "Sem
+                                            créditos para receber", e será necessário entrar em contato com o
+                                            supervisor
+                                            responsável.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2>Não encontrou o que procurava?</h2>
+                <a class="contact-button" id="whats" href="https://wa.me/555491630943" target="_blank">Entre em
+                    Contato</a>
+            </div>
+        </main>
+
+        <footer class="footer_pages">
+            <div class="container-footer">
+                <p>&copy; 2025 Veplex.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="container_back_start">
+        <button class="return_start_screen" id="return_start_screen"><i
+                class="bi2 bi-arrow-up-circle-fill"></i></button>
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeScreen()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    <script src="../scripts/utils.js"></script>
+
+
+</body>
