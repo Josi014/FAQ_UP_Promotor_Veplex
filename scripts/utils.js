@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(target) {
       setTimeout(() => {
         target.click(); 
-      }, 200); 
+      }, 300); 
     } else {
       console.warn(`Elemento com ID "${id}" não encontrado.`);
     }
