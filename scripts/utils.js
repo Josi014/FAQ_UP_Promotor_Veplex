@@ -50,7 +50,7 @@ function accordion() {
 }
 
 function openAccordionHome(targetId) {
-  localStorage.setItem('abrirAccordion', targetId);
+  localStorage.setItem('openAccordionHome', targetId);
 }
 
 function controlaMenu() {
@@ -152,7 +152,7 @@ function init() {
 document.addEventListener("DOMContentLoaded", () => {
   init();
 
-  const id = localStorage.getItem('abrirAccordion');
+  const id = localStorage.getItem('openAccordionHome');
   if(id) {
     const target = document.getElementById(id);
     if(target) {
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       console.warn(`Elemento com ID "${id}" não encontrado.`);
     }
-    localStorage.removeItem('abrirAccordion');
+    localStorage.removeItem('openAccordionHome');
   }
 });
 
