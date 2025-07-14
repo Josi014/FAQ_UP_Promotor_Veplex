@@ -42,7 +42,7 @@ function accordion() {
             targetHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
           }
-        }, 300);
+        }, 500);
       }
     });
 
